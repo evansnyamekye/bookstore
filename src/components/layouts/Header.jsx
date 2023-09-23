@@ -7,7 +7,7 @@ import { FaUser } from 'react-icons/fa';
 function Header({ dark }) {
   return (
     <>
-      <nav className="navbar font-montserrat bg-white dark:bg-teal-900 shadow-lg">
+      <nav className="navbar font-montserrat bg-white dark:bg-teal-900 shadow-lg sticky top-0">
         <div className="container px-3 mx-auto flex justify-between items-center py-7 lg:px-20">
           <div className="flex gap-11">
             <Link to="/" className="text-3xl font-bold align-miffle text-blue-500">

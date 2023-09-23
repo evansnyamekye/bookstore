@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Card from '../components/Card';
-import AddBook from '../components/AddBook';
+import Card from './Card';
+import AddBook from './AddBook';
 
-function Home() {
+function Books() {
   const [books, setBook] = useState([
     {
       id: 1,
@@ -39,7 +39,7 @@ function Home() {
   };
 
   return (
-    <>
+    <div>
       {books.map((todo) => (
         <Card
           key={todo.id}
@@ -53,8 +53,9 @@ function Home() {
       ))}
       <div className="border-b-2 border-b-gray-200 pt-5" />
       <AddBook handleAdd={addBook} />
-    </>
+      {/* <BookList books={books} /> */}
+    </div>
   );
 }
 
-export default Home;
+export default Books;

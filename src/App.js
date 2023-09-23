@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
-import Home from './pages/Home';
+import Books from './components/Books';
 import Categories from './pages/Categories';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Header dark={handleDarkMode} />
           <main className="container mx-auto px-3 py-5 lg:px-20">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Books />} />
               <Route path="/categories" element={<Categories />} />
             </Routes>
           </main>

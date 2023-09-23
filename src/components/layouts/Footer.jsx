@@ -5,7 +5,7 @@ function Footer() {
   const footerYear = new Date().getFullYear();
 
   return (
-    <footer className="font-montserrat footer px-10 py-5 bg-white shadow-lg text-primary-content text-center md:text-start dark:bg-teal-800">
+    <footer className="font-montserrat footer px-10 py-5 bg-white shadow-lg text-primary-content text-center md:text-start dark:bg-teal-800 sticky bottom-0">
       <div className="container mx-auto flex flex-col justify-between items-center px-3 md:flex-row :mdlex-wrap">
         <Link to="/" className="text-3xl font-bold align-miffle text-blue-500">Bookstore CMS</Link>
         <p className="dark:text-white">
