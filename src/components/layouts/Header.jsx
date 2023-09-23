@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { BsFillMoonStarsFill } from 'react-icons/bs';

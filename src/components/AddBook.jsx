@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 function AddBook({ handleAdd }) {
-  // eslint-disable-next-line no-unused-vars
   const [text, setText] = useState('');
   const [category, setCategory] = useState('');
   const [btnDissable, setBtnDissable] = useState(true);
