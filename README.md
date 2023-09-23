@@ -50,7 +50,7 @@
 <!-- Live Demo -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-<a href=""> Book Store 🚀</a>
+<a href="">Not yet</a>
 
 <!-- GETTING STARTED -->
 
