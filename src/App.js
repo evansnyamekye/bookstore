@@ -1,0 +1,34 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import Header from './components/layouts/Header';
+import Footer from './components/layouts/Footer';
+import Books from './components/BookList';
+import Categories from './pages/Categories';
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <Router>
+      <section className={darkMode ? 'dark' : ''}>
+        <div className="text-black flex flex-col justify-between bg-gray-100 dark:bg-gray-900">
+          <Header dark={handleDarkMode} />
+          <main className="container mx-auto px-3 py-5 lg:px-20">
+            <Routes>
+              <Route path="/" element={<Books />} />
+              <Route path="/categories" element={<Categories />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </section>
+    </Router>
+  );
+}
+
+export default App;
