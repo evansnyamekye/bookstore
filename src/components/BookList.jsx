@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Card from './Card';
 import AddBook from './AddBook';
 
-function Books() {
-  const [books, setBook] = useState([
+function BookList() {
+  const [bookList, setBook] = useState([
     {
       id: 1,
       category: 'Action',
@@ -31,16 +31,16 @@ function Books() {
   ]);
 
   const addBook = (newBook) => {
-    setBook([newBook, ...books]);
+    setBook([newBook, ...bookList]);
   };
 
   const handleDelete = (nid) => {
-    setBook(books.filter((todo) => todo.id !== nid));
+    setBook(bookList.filter((todo) => todo.id !== nid));
   };
 
   return (
     <div>
-      {books.map((todo) => (
+      {bookList.map((todo) => (
         <Card
           key={todo.id}
           category={todo.category}
@@ -58,4 +58,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default BookList;

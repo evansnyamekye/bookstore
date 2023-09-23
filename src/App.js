@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
-import Books from './components/Books';
+import Books from './components/BookList';
 import Categories from './pages/Categories';
 
 function App() {

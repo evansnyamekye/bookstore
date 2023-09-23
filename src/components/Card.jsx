@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import PropTypes from 'prop-types';
 
