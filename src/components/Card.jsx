@@ -29,7 +29,7 @@ function Card({
           <div className="font-robotoSlab">
             <p className="uppercase text-gray-400 mt-0">Current chapter</p>
             <p className="my-3">{chapter}</p>
-            <a className="p-3 px-6 pt-2 text-white bg-blue-500 baseline rounded-md uppercase text-sm hover:bg-blue-700 md:text-md">update progress</a>
+            <a className="p-3 px-6 pt-2 text-white bg-blue-500 baseline rounded-md uppercase text-sm hover:bg-blue-700 md:text-md cursor-pointer">update progress</a>
           </div>
         </div>
       </div>
