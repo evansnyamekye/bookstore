@@ -2,7 +2,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addNewBook } from '../redux/books/bookSlice';
+import { addNewBook } from '../redux/books/booksSlice';
 
 function AddBook() {
   const dispatch = useDispatch();
@@ -64,7 +64,6 @@ function AddBook() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const newId = uuidv4();
     if (text.trim().length > 2) {
       const newTodo = {
         id: uuidv4(),
