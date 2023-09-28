@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { useSelector } from 'react-redux';
 import Card from './Card';
 import AddBook from './AddBook';
