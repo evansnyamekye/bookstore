@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -9,14 +8,7 @@ const initialState = {
 const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
-  reducers: {
-    getCategoryStatus: (state, action) => {
-      state.categories = action.payload === 'Under construction'
-        ? 'Under construction'
-        : state.categories;
-    },
-  },
+  getCategoryStatus: () => 'Under construction',
 });
 
-export const { getCategoryStatus } = categoriesSlice.actions;
 export default categoriesSlice.reducer;
