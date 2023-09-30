@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addNewBook } from '../redux/books/booksSlice';
+import { addBookItem } from '../redux/books/booksSlice';
 
 function AddBook() {
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ function AddBook() {
         category,
       };
 
-      dispatch(addNewBook(newBook));
+      dispatch(addBookItem(newBook));
       setMessage(null);
       setTitle('');
       setMessage('Book add successfully');
@@ -86,7 +86,7 @@ function AddBook() {
             onChange={(e) => setCategory(e.target.value)}
             value={category}
           >
-            <option value="Catigories">Catigories</option>
+            <option value="Categories">Categories</option>
             <option value="Action">Action</option>
             <option value="Science Fiction">Science Fiction</option>
             <option value="Economy">Economy</option>
