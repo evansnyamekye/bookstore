@@ -1,33 +1,33 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Card from './Card';
-import AddBook from './AddBook';
+import { fetchBooks } from '../redux/books/booksSlice';
 
 function BookList() {
-  const { bookItems, count } = useSelector((book) => book.bookItems);
-  if (count < 1) {
-    return (
-      <>
-        <div className="h-screen">
-          <p className="text-center">Empty</p>
-        </div>
-        <AddBook />
-      </>
-    );
-  }
+  const List = useSelector((state) => state.bookItems.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <>
-      {bookItems.map((item) => (
-        <Card
-          key={item.id}
-          id={item.id}
-          title={item.title}
-          author={item.author}
-          category={item.category}
-        />
-      ))}
-      <div className="border-b-2 border-b-gray-200 pt-5" />
-      <AddBook />
+      {List ? (
+        List.map((item) => (
+          <Card
+            title={item.title}
+            key={item.item_id}
+            id={item.item_id}
+            author={item.author}
+            category={item.category}
+          />
+        ))
+      ) : (
+        <div>
+          <h3>No Books</h3>
+        </div>
+      )}
     </>
   );
 }
